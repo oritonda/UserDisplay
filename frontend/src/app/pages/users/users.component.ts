@@ -12,6 +12,8 @@ export class UsersComponent implements OnInit {
   users:User|any
   //declaring user id to store the user id and initialize with default id if 0
   userId:number = 0
+  // decaring an object to contain user details
+  userDetails:User|any
 
   constructor(private api:UsersApiService) { }
 
@@ -28,6 +30,15 @@ export class UsersComponent implements OnInit {
       this.users = users
     })
 
+  }
+  //funtion to get a user by id
+  getUserById(id:number)
+  {
+    console.log(id)
+    this.api.getUserByID(id).subscribe((userDetails)=>{
+      this.userDetails = userDetails
+      console.log(this.userDetails)
+    })
   }
 
 }

@@ -1,5 +1,17 @@
 <div class="container">
-  <ul *ngFor="let user of users" class="list-group">
-    <li class="list-group-item">{{ user.name }}</li>
-  </ul>
+  <div class="users">
+    <ul *ngFor="let user of users" class="list-group">
+        <li type="button" class="list-group-item" (click)=(getUserById(user.id)) >{{ user.name }}</li>
+      </ul>
+  </div>
+  <div class="usersDetails">
+    <div *ngIf="this.userDetails" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+  </div>
 </div>

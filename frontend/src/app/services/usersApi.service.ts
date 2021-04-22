@@ -16,6 +16,6 @@ url = environment.apiUrl;
   // function to get a user by user's id 
   getUserByID(userId:number)
   {
-    return this.http.get(`${this.url}/userId`)
+    return this.http.get(`${this.url}/${userId}`)
   }
 }
