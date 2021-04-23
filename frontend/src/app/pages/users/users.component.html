@@ -1,28 +1,29 @@
 <div class="container">
   <div class="users">
     <ul *ngFor="let user of users" class="list-group">
-        <li type="button" class="bi bi-file-person list-group-item" (click)=(getUserById(user.id)) >{{ user.name }}</li>
+        <li type="button" class="bi bi-file-person list-group-item" (click)=(getUserById(user.id)) > {{ user.id }}.  {{ user.name }}</li>
       </ul>
   </div>
   <div class="usersDetails">
-    <div *ngIf="userDetails" class="card" style="width: 18rem;">
+    <div *ngIf="userDetails" class="card" style="width: 25rem;">
         <div class="card-header">
           <h3>Personal Details</h3>
-          <a><p><i class="bi bi-person-fill"></i> {{userDetails.name}}</p></a>
+          <a><p><i class="bi bi-person-fill"></i> Fullname: {{userDetails.name}}</p></a>
           <h5>Address</h5>
-          <p><i class="bi bi-geo-alt-fill"></i> {{userDetails.address.city}},{{userDetails.address.street}},{{userDetails.address.suite}}</p>
+          <p><i class="bi bi-geo-alt-fill"></i> Address: {{userDetails.address.city}},{{userDetails.address.street}},{{userDetails.address.suite}}</p>
         </div>
         <div class="card-body">
           <h3>Company Details</h3>
-          <h5 class="card-title"><i class="bi bi-building"></i> {{userDetails.company.name}}</h5>
-          <p class="card-text"><i class="bi bi-pencil-fill"></i> {{userDetails.company.catchPhrase}}</p>
+          <p class="card-title"><i class="bi bi-building"></i> Company: {{userDetails.company.name}}</p>
+          <p class="card-title"><i class="bi bi-briefcase-fill"></i> bs: {{userDetails.company.bs}}</p>
+          <p class="card-text"><i class="bi bi-pencil-fill"></i> catchPhrase: {{userDetails.company.catchPhrase}}</p>
         </div>
         <div class="card-footer">
           <h3>Contact Details</h3>
-          <p><i class="bi bi-envelope-fill"></i> {{userDetails.email}}</p>
-          <p><i class="bi bi-file-person"></i> {{userDetails.username}}</p>
-          <p><i class="bi bi-telephone-fill"></i> {{userDetails.phone}}</p>
-          <p><i class="bi bi-globe2"></i> {{userDetails.website}}</p>
+          <p><i class="bi bi-envelope-fill"></i> Email: {{userDetails.email}}</p>
+          <p><i class="bi bi-file-person"></i> Username: {{userDetails.username}}</p>
+          <p><i class="bi bi-telephone-fill"></i> Phone: {{userDetails.phone}}</p>
+          <p><i class="bi bi-globe2"></i> Website: {{userDetails.website}}</p>
         </div>
       </div>
       <div *ngIf="!userDetails" >

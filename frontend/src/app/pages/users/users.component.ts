@@ -37,7 +37,6 @@ export class UsersComponent implements OnInit {
     console.log(id)
     this.api.getUserByID(id).subscribe((userDetails)=>{
       this.userDetails = userDetails
-      console.log(this.userDetails)
     })
   }
 

@@ -12,12 +12,13 @@
   padding: 2%;
 }
 .users{
-    height: 60%;
+    height: 100%;
     width: 50%;
     margin: 10px;
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    
     justify-content: center;
     align-items: center;
 }
@@ -35,8 +36,7 @@
 }
 .list-group
 {
-    padding: 2px;
-    margin: 2px;
+    margin-top: 2px;
     width: 80%;
 }
 .card-footer{
