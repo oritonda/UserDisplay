@@ -34,7 +34,6 @@ export class UsersComponent implements OnInit {
   //funtion to get a user by id
   getUserById(id:number)
   {
-    console.log(id)
     this.api.getUserByID(id).subscribe((userDetails)=>{
       this.userDetails = userDetails
     })
