@@ -1,8 +1,7 @@
 
 .container{
-    height: 80vh;
-    width: 100%;
-    margin-top: 10vh;
+    height: 90vh;
+    margin-top: 5vh;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -13,18 +12,41 @@
   padding: 2%;
 }
 .users{
-    height: 80%;
+    height: 60%;
     width: 50%;
     margin: 10px;
-    background-color:green ;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
 }
 .usersDetails{
-    height: 80%;
+    height: 100%;
     width: 100%;
     margin: 10px;
-    background-color:green ;
+   justify-content: center;
+   align-items: center;
+    background: white;
+    display: flex;
+    padding: 10px;
+    overflow: scroll;
+    
 }
 .list-group
 {
+    padding: 2px;
+    margin: 2px;
     width: 80%;
+}
+.card-footer{
+    background: white;
+    border: none;
+}
+.card-header{
+    background: white;
+    border: none;
+}
+.card{
+    border: none;
 }

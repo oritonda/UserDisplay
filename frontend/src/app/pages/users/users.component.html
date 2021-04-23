@@ -1,17 +1,32 @@
 <div class="container">
   <div class="users">
     <ul *ngFor="let user of users" class="list-group">
-        <li type="button" class="list-group-item" (click)=(getUserById(user.id)) >{{ user.name }}</li>
+        <li type="button" class="bi bi-file-person list-group-item" (click)=(getUserById(user.id)) >{{ user.name }}</li>
       </ul>
   </div>
   <div class="usersDetails">
-    <div *ngIf="this.userDetails" class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div *ngIf="userDetails" class="card" style="width: 18rem;">
+        <div class="card-header">
+          <h3>Personal Details</h3>
+          <a><p><i class="bi bi-person-fill"></i> {{userDetails.name}}</p></a>
+          <h5>Address</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> {{userDetails.address.city}},{{userDetails.address.street}},{{userDetails.address.suite}}</p>
         </div>
+        <div class="card-body">
+          <h3>Company Details</h3>
+          <h5 class="card-title"><i class="bi bi-building"></i> {{userDetails.company.name}}</h5>
+          <p class="card-text"><i class="bi bi-pencil-fill"></i> {{userDetails.company.catchPhrase}}</p>
+        </div>
+        <div class="card-footer">
+          <h3>Contact Details</h3>
+          <p><i class="bi bi-envelope-fill"></i> {{userDetails.email}}</p>
+          <p><i class="bi bi-file-person"></i> {{userDetails.username}}</p>
+          <p><i class="bi bi-telephone-fill"></i> {{userDetails.phone}}</p>
+          <p><i class="bi bi-globe2"></i> {{userDetails.website}}</p>
+        </div>
+      </div>
+      <div *ngIf="!userDetails" >
+        <h1>please select a user</h1>
       </div>
   </div>
 </div>

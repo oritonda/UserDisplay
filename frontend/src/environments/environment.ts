@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
     //definig api url
-    apiUrl:'https://jsonplaceholder.typicode.com/users'
+    apiUrl:'https://jsonplaceholder.cypress.io/users'
 };
 
 /*
