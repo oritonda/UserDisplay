@@ -1,5 +1,6 @@
 <div class="container">
   <div class="users">
+    <h3>Users List</h3>
     <ul *ngFor="let user of users" class="list-group">
         <li type="button" class="bi bi-file-person list-group-item" (click)=(getUserById(user.id)) > {{ user.id }}.  {{ user.name }}</li>
       </ul>
