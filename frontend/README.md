@@ -1,3 +1,4 @@
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
@@ -25,3 +26,32 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Prerequisites
+
+Visual Studio Code
+MongoDB Compass
+Node & NPM
+NodeJS v14.16.0
+npm 7.6.3
+Angular 11.2.4
+Angular CLI 11.2.4
+
+NB: If you have not installed Visual Studio Code on your machine please visit the Visual Studio Code Official Site, download and set it up
+
+NB: If you have not installed NodeJS on your machine please visit the NodeJS Official Site, download and set it up
+
+Project Setup
+
+Step 1
+cd frontend
+
+step 2
+
+on the frontend
+
+run command: npm install
+
+step 3. frontend folder
+after the npm install commands finishes
+run command: ng serve
